@@ -2259,8 +2259,8 @@ apprentice_map(struct magic_set *ms, struct magic **magicp, uint32_t *nmagicp,
 	else
 		version = ptr[1];
 	if (version != VERSIONNO) {
-		file_error(ms, 0, "File %s supports only version %d magic "
-		    "files. `%s' is version %d", VERSION,
+		file_error(ms, 0, "File supports only version %d magic "
+		    "files. `%s' is version %d",
 		    VERSIONNO, dbname, version);
 		goto error1;
 	}
