@@ -23,7 +23,6 @@
 		A3BE8C8E1509067200291852 /* funcs.c in Sources */ = {isa = PBXBuildFile; fileRef = A3BE8C751509067200291852 /* funcs.c */; };
 		A3BE8C901509067200291852 /* is_tar.c in Sources */ = {isa = PBXBuildFile; fileRef = A3BE8C771509067200291852 /* is_tar.c */; };
 		A3BE8C911509067200291852 /* magic.c in Sources */ = {isa = PBXBuildFile; fileRef = A3BE8C781509067200291852 /* magic.c */; };
-		A3BE8C921509067200291852 /* magic.h in Headers */ = {isa = PBXBuildFile; fileRef = A3BE8C791509067200291852 /* magic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3BE8C941509067200291852 /* magicios.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BE8C7C1509067200291852 /* magicios.m */; };
 		A3BE8C951509067200291852 /* print.c in Sources */ = {isa = PBXBuildFile; fileRef = A3BE8C7D1509067200291852 /* print.c */; };
 		A3BE8C961509067200291852 /* readcdf.c in Sources */ = {isa = PBXBuildFile; fileRef = A3BE8C7E1509067200291852 /* readcdf.c */; };
@@ -33,6 +32,7 @@
 		A3BE8C9A1509067200291852 /* tar.h in Headers */ = {isa = PBXBuildFile; fileRef = A3BE8C821509067200291852 /* tar.h */; };
 		A3BE8C9C1509069D00291852 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BE8C9B1509069D00291852 /* libz.dylib */; };
 		A3BE8C9E150906A200291852 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BE8C9D150906A200291852 /* UIKit.framework */; };
+		FA47AEEC16D2571000F94474 /* magic.h in Headers */ = {isa = PBXBuildFile; fileRef = A3BE8C791509067200291852 /* magic.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,7 +155,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3BE8C921509067200291852 /* magic.h in Headers */,
+				FA47AEEC16D2571000F94474 /* magic.h in Headers */,
 				A3BE8C881509067200291852 /* cdf.h in Headers */,
 				A3BE8C8A1509067200291852 /* elfclass.h in Headers */,
 				A3BE8C8C1509067200291852 /* file.h in Headers */,

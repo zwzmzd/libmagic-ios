@@ -73,16 +73,24 @@ get_hw_machine(void)
 const char *
 magic_ios_get_default_magic(void)
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentPath = nil;
-    if ([paths count] <= 0)
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error = nil;
+    
+    NSURL* applicationSupportDirectoryURL = [fileManager URLForDirectory:NSApplicationSupportDirectory
+                                                                inDomain:NSUserDomainMask
+                                                       appropriateForURL:nil
+                                                                  create:YES
+                                                                   error:&error];
+    if (error) {
+        NSLog(@"error finding app support directory %@", error);
         return NULL;
-    documentPath = [paths objectAtIndex:0];
+    }
+    NSString *applicationSupportDirectory = [applicationSupportDirectoryURL path];
 
     char *machine = get_hw_machine();
     if (machine == NULL)
         return NULL;
-    NSString *t = [documentPath stringByAppendingPathComponent:[NSString stringWithFormat:@".magic-%s", machine]];
+    NSString *t = [applicationSupportDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@".magic-%s", machine]];
     free(machine);
     const char *ret = [[t stringByAppendingPathComponent:@"magic.mgc"] UTF8String];
     if (ret == nil)
