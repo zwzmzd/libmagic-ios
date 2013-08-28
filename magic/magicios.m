@@ -90,7 +90,7 @@ magic_ios_get_default_magic(void)
     char *machine = get_hw_machine();
     if (machine == NULL)
         return NULL;
-    NSString *t = [applicationSupportDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@".magic-%s", machine]];
+    NSString *t = [applicationSupportDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@".magic-1.7-%s", machine]];
     free(machine);
     const char *ret = [[t stringByAppendingPathComponent:@"magic.mgc"] UTF8String];
     if (ret == nil)
