@@ -3315,9 +3315,6 @@
 0	regex	\^virtual		C++ source text
 !:strength + 10
 !:mime	text/x-c++
-0	regex	\^class		C++ source text
-!:strength + 10
-!:mime	text/x-c++
 0	regex	\^public:		C++ source text
 !:strength + 10
 !:mime	text/x-c++
